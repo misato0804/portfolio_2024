@@ -24,12 +24,12 @@ const config = {
         display: ['Playfair Display', 'serif'],
       },
       fontSize: {
-        'xs': 'clamp(0.8rem, calc(0.8rem + 0.625vw), 1.3rem)',   // Example values
-        'sm': 'clamp(1rem, calc(0.9rem + 0.625vw), 1.6rem)', // Example values
-        'base': 'clamp(1.2rem, calc(1rem + 0.625vw), 1.7rem)', // Example values
-        'lg': 'clamp(1.6rem, calc(1.4rem + 0.625vw), 2.2rem)', // Example values
-        'xl': 'clamp(2.4rem, calc(2.2rem + 0.625vw), 2.9rem)', // Example values
-        '2xl': 'clamp(3rem, calc(2.8rem + 0.625vw), 3.6rem)',  // Example values
+        'xs': 'clamp(0.8rem, calc(0.8rem + 0.625vw), 1.3rem)',   
+        'sm': 'clamp(1rem, calc(0.9rem + 0.625vw), 1.6rem)', 
+        'base': 'clamp(1.2rem, calc(1rem + 0.625vw), 1.7rem)', 
+        'lg': 'clamp(1.6rem, calc(1.4rem + 0.625vw), 2.2rem)', 
+        'xl': 'clamp(2.4rem, calc(2.2rem + 0.625vw), 2.9rem)', 
+        '2xl': 'clamp(3rem, calc(2.8rem + 0.625vw), 3.6rem)',  
         'p': 'clamp(1rem, calc(0.9rem + 0.625vw), 1.4rem)'
       },
       colors: {
