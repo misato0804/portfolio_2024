@@ -1,0 +1,16 @@
+.project-container {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.project {
+  flex: 0 0 20%;
+  height: 100vh;
+  background-color: orange;
+}
+
+.orange {
+  background-color: orange;
+}

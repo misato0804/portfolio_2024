@@ -80,27 +80,27 @@
       @apply bg-background text-foreground;
     }
     h1 {
-      @apply text-2xl font-display font-bold;
+      @apply text-2xl font-bold;
     }
     
     h2 {
-      @apply text-xl font-display;
+      @apply text-xl;
     }
     
     h3 {
-      @apply text-lg font-display;
+      @apply text-lg;
     }
     
     h4 {
-      @apply text-base font-display;
+      @apply text-base;
     }
     
     h5 {
-      @apply text-sm font-display;
+      @apply text-sm;
     }
     
     h6 {
-      @apply text-xs font-display;
+      @apply text-xs;
     }
     
     p {

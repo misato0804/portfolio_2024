@@ -27,12 +27,12 @@ export const MainTop = () => {
 
   return (
     <>
-      <div className="main-top">
+      <section className="main-top">
         <div>
           <h1 ref={titleRef} className="text-7xl">Misato Tanno</h1>
           <h3 ref={subtitleRef}>Frontend engineer</h3>
         </div>
-      </div>
+      </section>
      {/* TODO: INSERT 3D BACKGROUND */}
      <ScrollDown />
     </>
