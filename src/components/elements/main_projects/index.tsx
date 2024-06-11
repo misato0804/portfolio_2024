@@ -1,4 +1,5 @@
 'use client'
+import { ProjectCard } from '@/components/features/projectCard';
 import './style.css'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -37,16 +38,16 @@ export const MainProjects = () => {
     <div ref={containerRef} className='project-container'>
       <div ref={scrollRef} className='flex w-[400%]'>
         <div className='project'>
-          Section 1
+          <ProjectCard />
         </div>
         <div className='project'>
-          Section 1
+          <ProjectCard />
         </div>
         <div className='project'>
-          Section 1
+          <ProjectCard />
         </div>
         <div className='project'>
-          Section 1
+          <ProjectCard />
         </div>
       </div>
     </div>
