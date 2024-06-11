@@ -29,6 +29,7 @@ export const Header = () => {
         <ul className='flex min-w-72 justify-around gap-12'>
           <li className="text-md font-bold">PROJECTS</li>
           <li className="text-md font-bold">ABOUT</li>
+          <li className="text-md font-bold">BLOG</li>
           <li className="text-md font-bold">CONTACT</li>
         </ul>
       </div>
