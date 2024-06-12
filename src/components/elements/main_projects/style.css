@@ -5,8 +5,13 @@
   width: 100%;
 }
 
+.scroll-container {
+  display: flex;
+  width: 400%;
+}
+
 .project {
-  flex: 0 0 20%;
+  flex: 0 0 25%;
   height: 100vh;
   background-color: orange;
 }

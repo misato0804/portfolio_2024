@@ -2,8 +2,7 @@
 import { useEffect, useRef } from "react";
 import "./style.css"
 import gsap from 'gsap';
-import { Canvas } from "@react-three/fiber";
-import  ScrollDown  from "@/components/features/scrollDown"
+import ScrollDown from "@/components/features/scrollDown"
 
 export const MainTop = () => {
 
@@ -22,7 +21,6 @@ export const MainTop = () => {
       { opacity: 0, y: 30 },
       { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
     )
-
   }, [])
 
   return (
@@ -33,8 +31,8 @@ export const MainTop = () => {
           <h3 ref={subtitleRef}>Frontend engineer</h3>
         </div>
       </section>
-     {/* TODO: INSERT 3D BACKGROUND */}
-     <ScrollDown />
+      {/* TODO: INSERT 3D BACKGROUND */}
+      <ScrollDown />
     </>
   )
 }
