@@ -23,7 +23,6 @@ export const MainTop = () => {
       { opacity: 0, y: 30 },
       { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
     )
-
   }, [])
 
   return (
