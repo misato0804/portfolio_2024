@@ -10,6 +10,7 @@ export default function Home() {
       <main className="">
         <MainTop/>
         <MainProjects/>
+
         {/*  About me  */}
         {/*  Works  */}
         {/*  Contact  */}
