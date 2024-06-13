@@ -3,8 +3,8 @@ import { useEffect, useRef } from "react";
 import "./style.css"
 import gsap from 'gsap';
 import { Canvas } from "@react-three/fiber";
-import ScrollDown from "@/components/features/scrollDown"
-import { Particles } from "@/components/features/3D/cherryblossom";
+import ScrollDown from "@/app/components/features/scrollDown"
+import { Particles } from "@/app/components/features/3D/cherryblossom";
 
 export const MainTop = () => {
 

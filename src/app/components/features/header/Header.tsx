@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react'
 import gsap from "gsap"
+import Link from 'next/link';
 
 export const Header = () => {
 
@@ -31,6 +32,7 @@ export const Header = () => {
           <li className="text-md font-bold">ABOUT</li>
           <li className="text-md font-bold">BLOG</li>
           <li className="text-md font-bold">CONTACT</li>
+          <Link href='/test'>Test</Link>
         </ul>
       </div>
     </header>

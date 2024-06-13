@@ -1,5 +1,5 @@
 'use client'
-import { ProjectCard } from '@/components/features/projectCard';
+import { ProjectCard } from '@/app/components/features/projectCard';
 import './style.css'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
