@@ -35,11 +35,11 @@ export const MainTop = () => {
       </section>
       {/* TODO: INSERT 3D BACKGROUND */}
       <ScrollDown />
-      <div className="w-screen h-screen fixed top-0 left-0 z-[-1]">
+      {/* <div className="w-screen h-screen fixed top-0 left-0 z-[-1]">
         <Canvas>
           <Particles/>
         </Canvas>
-      </div>
+      </div> */}
     </>
   )
 }

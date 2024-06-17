@@ -105,10 +105,15 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "strokeDash" : {
+          from: {strokeDashoffset: '290'},
+          to: {strokeDashoffset: '0'}
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        'stroke-dash': 'strokeDash 2s ease-in-out infinite'
       },
     },
   },
