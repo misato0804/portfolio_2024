@@ -1,4 +1,5 @@
 'use client'
+import MainAbout from "@/components/elements/main_about";
 import { MainProjects } from "@/components/elements/main_projects";
 import { MainTop } from "@/components/elements/main_top";
 import { Footer } from "@/components/features/footer/Footer";
@@ -15,11 +16,10 @@ export default function Home() {
       {isLoading ? <PreLoader setIsLoading={setIsLoading} /> :
         <>
           <Header />
-          <main className="">
+          <main>
             <MainTop />
             <MainProjects />
-            {/*  About me  */}
-            {/*  Works  */}
+            <MainAbout/>
             {/*  Contact  */}
             {/*  Resume  */}
           </main>

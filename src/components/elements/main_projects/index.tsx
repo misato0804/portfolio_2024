@@ -39,8 +39,6 @@ export const MainProjects = () => {
         },
       });
 
-
-      // Image animation
       if (imageContainer.current && imageRef.current) {
 
         const tl = gsap.timeline({
@@ -50,7 +48,7 @@ export const MainProjects = () => {
             end: 'bottom 10%',
             toggleActions: 'play none none none',
             scrub: 1,
-            markers: true
+            // markers: true
           }
         });
 
@@ -82,8 +80,6 @@ export const MainProjects = () => {
     });
 
     return () => ctx.revert();
-
-
   }, []);
 
 
