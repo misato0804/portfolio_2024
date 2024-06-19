@@ -8,7 +8,7 @@ export const Particles = () => {
 
   //
   const particles = new THREE.BufferGeometry();
-  const count = 1000
+  const count = 500
   const positions = new Float32Array(count * 3);
 
   const colors = new Float32Array(count * 3);
