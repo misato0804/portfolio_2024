@@ -1,0 +1,27 @@
+footer {
+  width: 100vw;
+  background-color: rgb(16, 15, 17);
+  color: aliceblue;
+  opacity: 70%;
+  padding: 6rem 16rem;
+}
+
+.footer-sub-title {
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.container {
+  min-height: 12rem;
+  display: flex;
+  align-items: center;
+}
+
+.container.left {
+  justify-content: end;
+}
+
+ul {
+  display: flex;
+  gap: 2rem;
+}
