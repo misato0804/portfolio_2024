@@ -29,12 +29,12 @@ const MainAbout = () => {
         markers: true,
         onEnter: () => {
           gsap.to(objectText, {
-            duration:1,
+            duration:.3,
             opacity: 0,
             onComplete: () => {
               objectText.innerText = newText;
               gsap.to(objectText, {
-                duration: 1,
+                duration: .3,
                 opacity: 1
               });
             },
@@ -43,12 +43,12 @@ const MainAbout = () => {
         },
         onLeaveBack: () => {
           gsap.to( objectText, {
-            duration: 1,
+            duration: .3,
             opacity: 0,
             onComplete: () => {
               objectText.innerText = originalText
               gsap.to(objectText, {
-                duration: 1, 
+                duration: .3, 
                 opacity: 1
               })
             }
