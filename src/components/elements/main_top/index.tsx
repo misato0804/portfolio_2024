@@ -24,14 +24,16 @@ export const MainTop = () => {
   }, [])
 
   return (
-    <section className="main-top">
-      <div>
+    <>
+      <section className="main-top">
         <div>
-          <h1 ref={titleRef} className="text-7xl">Misato Tanno</h1>
-          <h3 ref={subtitleRef}>Frontend engineer</h3>
+          <div>
+            <h1 ref={titleRef} className="text-7xl">Misato Tanno</h1>
+            <h3 ref={subtitleRef}>Frontend engineer</h3>
+          </div>
+          <ScrollDown />
         </div>
-        <ScrollDown />
-      </div>
-    </section>
+      </section>
+    </>
   )
 }

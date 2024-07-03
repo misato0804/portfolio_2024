@@ -26,7 +26,7 @@ const MainAbout = () => {
       ScrollTrigger.create({
         trigger: triggerContainer,
         start: 'center center',
-        markers: true,
+        // markers: true,
         onEnter: () => {
           gsap.to(objectText, {
             duration:.3,

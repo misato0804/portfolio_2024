@@ -1,6 +1,49 @@
-import { useFrame } from "@react-three/fiber";
-import { useMemo, useRef } from "react";
+import { useFrame, extend } from "@react-three/fiber";
+import { useEffect, useMemo, useRef } from "react";
 import * as THREE from 'three';
+import { shaderMaterial } from '@react-three/drei';
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+const CircleMaterial = shaderMaterial(
+  {
+    uColor: new THREE.Color(0xff69b4), // Light pink color for cherry blossom
+  },
+  // Vertex Shader
+  `
+  varying vec2 vUv;
+  void main() {
+    vUv = uv;
+    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+    gl_PointSize = 7.0; // Adjust size as needed
+  }
+  `,
+  // Fragment Shader
+  `
+  uniform vec3 uColor;
+  varying vec2 vUv;
+  void main() {
+    vec2 cxy = 2.0 * gl_PointCoord - 1.0;
+    float r = dot(cxy, cxy);
+    if (r > 1.0) {
+      discard;
+    }
+    gl_FragColor = vec4(uColor, 0.9);
+  }
+  `
+);
+
+extend({ CircleMaterial });
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      circleMaterial: any;
+    }
+  }
+}
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const Particles = () => {
 
@@ -13,7 +56,7 @@ export const Particles = () => {
   const count = 1000
 
   const mesh = useRef<THREE.Points>(null);
-  const light = useRef<THREE.PointLight>(null);
+  const materialRef = useRef<THREE.ShaderMaterial>(null);
 
   const particlesData = useMemo(() => {
     const temp: ParticleData[] = [];
@@ -44,6 +87,51 @@ export const Particles = () => {
     return positions;
   }, [particlesData]);
 
+
+  useEffect(() => {
+    const colors = [
+      new THREE.Color(0xffb3ba), // Spring (light pink)
+      new THREE.Color(0xb3e0ff), // Summer (light blue)
+      new THREE.Color(0xffe0b3), // Autumn (light orange)
+      new THREE.Color(0xe0b3ff)  // Winter (light purple)
+    ];
+
+    if (materialRef.current) {
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: document.body,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: true,
+        }
+      })
+        .to(materialRef.current.uniforms.uColor.value, {
+          r: colors[0].r,
+          g: colors[0].g,
+          b: colors[0].b,
+          duration: 1,
+        }, 0)
+        .to(materialRef.current.uniforms.uColor.value, {
+          r: colors[1].r,
+          g: colors[1].g,
+          b: colors[1].b,
+          duration: 1,
+        }, 1 / 3)
+        .to(materialRef.current.uniforms.uColor.value, {
+          r: colors[2].r,
+          g: colors[2].g,
+          b: colors[2].b,
+          duration: 1,
+        }, 2 / 3)
+        .to(materialRef.current.uniforms.uColor.value, {
+          r: colors[3].r,
+          g: colors[3].g,
+          b: colors[3].b,
+          duration: 1,
+        }, 1);
+    }
+  }, []);
+
   useFrame((state) => {
     if (mesh.current) {
       const positions = mesh.current.geometry.attributes.position.array as Float32Array;
@@ -64,26 +152,20 @@ export const Particles = () => {
     }
   });
 
+
   return (
     <>
       <points ref={mesh}>
-      <bufferGeometry>
-      <bufferAttribute
-          attach="attributes-position"
-          array={positions}
-          count={count}
-          itemSize={3}
-        />
-      </bufferGeometry>
-      <pointsMaterial
-        size={0.2}
-        sizeAttenuation
-        transparent
-        opacity={0.9}
-        map={new THREE.TextureLoader().load('/petal.jpg')}
-        depthWrite={false}
-      />
-    </points>
+        <bufferGeometry>
+          <bufferAttribute
+            attach="attributes-position"
+            array={positions}
+            count={count}
+            itemSize={3}
+          />
+        </bufferGeometry>
+        <circleMaterial ref={materialRef} attach="material" uColor={new THREE.Color(0xff69b4)} />
+      </points>
     </>
   )
 }
