@@ -1,4 +1,5 @@
 'use client'
+import { BackGround } from "@/components/elements/background";
 import MainAbout from "@/components/elements/main_about";
 import { MainProjects } from "@/components/elements/main_projects";
 import { MainTop } from "@/components/elements/main_top";
@@ -19,9 +20,8 @@ export default function Home() {
           <main>
             <MainTop />
             <MainProjects />
-            <MainAbout/>
-            {/*  Contact  */}
-            {/*  Resume  */}
+            <MainAbout />
+            <BackGround />
           </main>
           <Footer />
         </>}

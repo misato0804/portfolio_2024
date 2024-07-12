@@ -1,14 +1,5 @@
-import React, { ForwardRefExoticComponent, RefAttributes } from 'react'
 import { Button } from "@/components/ui/button"
-import { LucideProps } from 'lucide-react'
-
-type ButtonProps = {
- title : string,
- icon?: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>,
- onClick: () => void,
- bgColor: string
-}
-
+import { ButtonProps } from "./type"
 
 const ButtonNormal = ({title, icon: IconComponent, onClick, bgColor} : ButtonProps) => {
   return (
