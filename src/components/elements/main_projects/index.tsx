@@ -24,6 +24,10 @@ export const MainProjects = () => {
 
     if (!container || !scroll) return
 
+    const totalWidth = scroll.scrollWidth;
+    console.log(`Total scroll width: ${totalWidth}px`);
+
+
     let ctx = gsap.context(() => {
       const horizontalScroll = gsap.timeline({
         scrollTrigger: {
@@ -39,28 +43,29 @@ export const MainProjects = () => {
         ease: 'none',
       });
 
-      projectRefs.current.forEach((project, index) => {
-        if (project) {
-          gsap.fromTo(project,
-            {
-              opacity: 0,
-              y: 100
-            },
-            {
-              opacity: 1,
-              y: 0,
-              scrollTrigger: {
-                trigger: project,
-                containerAnimation: horizontalScroll,
-                start: "left 80%",
-                end: "right center",
-                scrub: true,
-              },
-            })
-        }
-      })
+    //   projectRefs.current.forEach((project, index) => {
+    //     if (project) {
+    //       gsap.fromTo(project,
+    //         {
+    //           opacity: 0,
+    //           y: 100
+    //         },
+    //         {
+    //           opacity: 1,
+    //           y: 0,
+    //           scrollTrigger: {
+    //             trigger: project,
+    //             containerAnimation: horizontalScroll,
+    //             start: "left 80%",
+    //             end: "right center",
+    //             scrub: true,
+    //           },
+    //         })
+    //     }
+    //   })
     })
 
+    console.log(ctx)
     return () => ctx.revert();
 
   }, [])

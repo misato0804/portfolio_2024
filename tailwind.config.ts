@@ -1,13 +1,14 @@
-import type { Config } from "tailwindcss"
+import { transform } from "next/dist/build/swc";
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -19,18 +20,18 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        serif: ['Lora', 'serif'],
-        display: ['Playfair Display', 'serif'],
+        sans: ["Inter", "sans-serif"],
+        serif: ["Lora", "serif"],
+        display: ["Playfair Display", "serif"],
       },
       fontSize: {
-        'xs': 'clamp(0.8rem, calc(0.8rem + 0.625vw), 1.3rem)',   
-        'sm': 'clamp(1rem, calc(0.9rem + 0.625vw), 1.6rem)', 
-        'base': 'clamp(1.2rem, calc(1rem + 0.625vw), 1.7rem)', 
-        'lg': 'clamp(1.6rem, calc(1.4rem + 0.625vw), 2.2rem)', 
-        'xl': 'clamp(2.4rem, calc(2.2rem + 0.625vw), 2.9rem)', 
-        '2xl': 'clamp(3rem, calc(2.8rem + 0.625vw), 3.6rem)',  
-        'p': 'clamp(1rem, calc(0.9rem + 0.625vw), 1.4rem)'
+        xs: "clamp(0.8rem, calc(0.8rem + 0.625vw), 1.3rem)",
+        sm: "clamp(1rem, calc(0.9rem + 0.625vw), 1.6rem)",
+        base: "clamp(1.2rem, calc(1rem + 0.625vw), 1.7rem)",
+        lg: "clamp(1.6rem, calc(1.4rem + 0.625vw), 2.2rem)",
+        xl: "clamp(2.4rem, calc(2.2rem + 0.625vw), 2.9rem)",
+        "2xl": "clamp(3rem, calc(2.8rem + 0.625vw), 3.6rem)",
+        p: "clamp(1rem, calc(0.9rem + 0.625vw), 1.4rem)",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -67,29 +68,29 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
         spring: {
-          cherryBlossom: '#FFB7C5',
-          softGreen: '#A7D2A9',
-          lightBlue: '#B5D9F8',
-          warmBeige: '#F8E3C2',
+          cherryBlossom: "#FFB7C5",
+          softGreen: "#A7D2A9",
+          lightBlue: "#B5D9F8",
+          warmBeige: "#F8E3C2",
         },
         summer: {
-          coral: '#FF6F61',
-          skyBlue: '#87CEEB',
-          lemonYellow: '#FFF44F',
-          seaGreen: '#2E8B57',
+          coral: "#FF6F61",
+          skyBlue: "#87CEEB",
+          lemonYellow: "#FFF44F",
+          seaGreen: "#2E8B57",
         },
         autumn: {
-          crimson: '#DC143C',
-          amber: '#FFBF00',
-          pumpkin: '#FF7518',
-          chestnut: '#954535',
+          crimson: "#DC143C",
+          amber: "#FFBF00",
+          pumpkin: "#FF7518",
+          chestnut: "#954535",
         },
         winter: {
-          snowWhite: '#FFFFFF',
-          iceBlue: '#A0D2DB',
-          slateGray: '#5B6E72',
-          pineGreen: '#316650',
-        }
+          snowWhite: "#FFFFFF",
+          iceBlue: "#A0D2DB",
+          slateGray: "#5B6E72",
+          pineGreen: "#316650",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -98,26 +99,53 @@ const config = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
         },
-        "strokeDash" : {
-          from: {strokeDashoffset: '290'},
-          to: {strokeDashoffset: '0'}
-        }
+        strokeDash: {
+          from: {
+            strokeDashoffset: "290",
+          },
+          to: {
+            strokeDashoffset: "0",
+          },
+        },
+        // "slide-in": {
+        //   to: {
+        //     transform: "translateX(0%)",
+        //   },
+        // },
+        // "slide-out": {
+        //   from: {
+        //     transform: "translateX(0%)",
+        //   },
+        //   to: {
+        //     transform: 'translateX(100%)'
+        //   },
+        // },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        'stroke-dash': 'strokeDash 2s ease-in-out infinite'
+        "stroke-dash": "strokeDash 2s ease-in-out infinite",
+        // "slide-in": "slide-in .5s forwards",
+        // "slide-out": "slide-out .5s "
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
