@@ -60,18 +60,20 @@ export const MainProjects = () => {
         }
       })
     })
-
     return () => ctx.revert();
 
   }, [])
 
+  if( !myProjects ) return
+
   return (
-    <div ref={containerRef} className='project-container'>
-      <div ref={scrollRef} className={`flex w-[${myProjects.length * 100}%]`}>
+    <div ref={containerRef} className='project-container' id='project'>
+      <div ref={scrollRef} className={`flex -z-10  h-full w-[400vw]`}>
         {myProjects.map((project, index) => (
           <div
             key={index}
             ref={(el) => setProjectRefs(el, index)}
+            className='w-screen -z-10'
           >
             <ProjectCard
               title={project.title}

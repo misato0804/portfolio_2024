@@ -1,15 +1,5 @@
 .project-container {
   overflow: hidden;
   height: 100vh;
-}
-
-.scroll-container {
-  display: flex;
-  width: 400%;
-}
-
-.project {
-  flex: 0 0 25%;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1;
 }

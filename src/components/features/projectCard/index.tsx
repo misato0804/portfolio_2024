@@ -4,12 +4,6 @@ import { FaCheck } from "react-icons/fa";
 import ButtonNormal from '@/components/elements/buttons/ButtonNormal';
 import { Code } from 'lucide-react';
 import { AppWindowMac } from 'lucide-react';
-import { useEffect, useRef } from 'react';
-
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 export const ProjectCard = ({ title, image, alt, demoLink, githubLink,description, stacks}: ProjectCardProps) => {
 
@@ -17,12 +11,13 @@ export const ProjectCard = ({ title, image, alt, demoLink, githubLink,descriptio
     <div className="h-screen flex-none w-1/4">
       <div className='w-screen h-screen flex justify-center items-center'>
         <div className='flex w-[80%] justify-evenly'>
-          <div className="image-container flex-1">
+          <div className="image-container flex-1 z-10">
             <Image
               alt={alt}
               src={image}
               width={400}
               height={500}
+              className='z-10'
             />
           </div>
           <div className='detail-container flex-1'>
