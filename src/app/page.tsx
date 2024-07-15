@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       {isLoading ? <PreLoader setIsLoading={setIsLoading} /> :
-        <>
+        <div>
           <Header />
           <main>
             <MainTop />
@@ -24,7 +24,7 @@ export default function Home() {
             <BackGround />
           </main>
           <Footer />
-        </>}
+        </div>}
     </>
   );
 }
