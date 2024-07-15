@@ -3,6 +3,7 @@ import { IoMdClose } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { sidebarLinks } from '@/data/sidebar-links';
 
 export const SideBar = ({ isOpen, setIsOpen }: {
   isOpen: boolean,
@@ -36,18 +37,18 @@ export const SideBar = ({ isOpen, setIsOpen }: {
         onClick={() => setIsOpen(false)}
       />
       <ul className='absolute right-12 flex flex-col w-[24px] h-4/5 justify-center items-center gap-36'>
-        <li><FaInstagram size={16}/></li>
-        <li><FaGithub size={16} /></li>
-        <li><FaLinkedin size={16} /></li>
+        <li><FaInstagram size={16} className='hover:text-white hover:cursor-pointer transition-all duration-300 text-gray-600'/></li>
+        <li><FaGithub size={16} className='hover:text-white hover:cursor-pointer transition-all duration-300 text-gray-600'/></li>
+        <li><FaLinkedin size={16} className='hover:text-white hover:cursor-pointer transition-all duration-300 text-gray-600'/></li>
       </ul>
       <div className='h-2/3 flex flex-col justify-center gap-12 my-24'>
         <h6 className=''>MENU</h6>
         <ul className='flex flex-col'>
-          <li className='font-display font-extrabold text-xl block' onClick={() => handleNavigation('home')}>Home</li>
-          <li className='font-display font-extrabold text-xl block' onClick={() => handleNavigation('project')}>project</li>
-          <li className='font-display font-extrabold text-xl block' onClick={() => handleNavigation('About')}>About</li>
-          <li className='font-display font-extrabold text-xl block' onClick={() => handleNavigation('blog')}>Blog</li>
-          <li className='font-display font-extrabold text-xl block' onClick={() => handleNavigation('blog')}>Resume</li>
+          {sidebarLinks.map((link) => (
+            <li key={link.navigationId} className='font-display font-extrabold text-xl block' onClick={() => handleNavigation(link.navigationId)}>
+              <h2 className='hover:cursor-pointer hover:text-2xl transition-all duration-300'>{link.title}</h2>
+            </li>
+          ))}
         </ul>
       </div>
       <div className='text-gray-600 absolute bottom-10 '>
