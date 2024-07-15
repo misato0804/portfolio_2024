@@ -14,7 +14,7 @@ export const sidebarLinks: SideBarLink[]  = [
   },
   {
     title: "About",
-    navigationId: "About"
+    navigationId: "about"
   },
   {
     title: "Blog",

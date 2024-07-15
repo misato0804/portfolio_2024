@@ -64,9 +64,11 @@ export const MainProjects = () => {
 
   }, [])
 
+  if( !myProjects ) return
+
   return (
     <div ref={containerRef} className='project-container' id='project'>
-      <div ref={scrollRef} className={`flex -z-10 h-full w-[${myProjects.length*100}vw]`}>
+      <div ref={scrollRef} className={`flex -z-10  h-full w-[400vw]`}>
         {myProjects.map((project, index) => (
           <div
             key={index}
