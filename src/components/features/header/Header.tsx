@@ -27,17 +27,15 @@ export const Header = () => {
 
   return (
     <>
-      {/* <header className="h-48 w-screen flex px-16 items-center">
+      <header className="h-48 w-screen flex px-16 items-center z-50" id='home'>
         <h2 id='header' className="tracking-tighter font-bold font-sans">Welcome</h2>
         <RxHamburgerMenu
           size={24}
-          className='fixed right-16 hover:cursor-pointer'
+          className='fixed right-16 hover:cursor-pointer z-50'
           onClick={() => setSidebarOpen(true)}
         />
       </header>
-
-      <SideBar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} /> */}
-
+      <SideBar isOpen={sidebarOpen} setIsOpen={setSidebarOpen} />
     </>
   )
 }

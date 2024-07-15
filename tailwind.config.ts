@@ -122,26 +122,26 @@ const config = {
             strokeDashoffset: "0",
           },
         },
-        // "slide-in": {
-        //   to: {
-        //     transform: "translateX(0%)",
-        //   },
-        // },
-        // "slide-out": {
-        //   from: {
-        //     transform: "translateX(0%)",
-        //   },
-        //   to: {
-        //     transform: 'translateX(100%)'
-        //   },
-        // },
+        "slide-in": {
+          to: {
+            transform: "translateX(0%)",
+          },
+        },
+        "slide-out": {
+          from: {
+            transform: "translateX(0%)",
+          },
+          to: {
+            transform: 'translateX(100%)'
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "stroke-dash": "strokeDash 2s ease-in-out infinite",
-        // "slide-in": "slide-in .5s forwards",
-        // "slide-out": "slide-out .5s "
+        "slide-in": "slide-in .5s forwards",
+        "slide-out": "slide-out .5s "
       },
     },
   },
