@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { Particles } from "@/components/features/3D/cherryblossom";
+import { Particles } from "@/components/features/3D/particles";
 
 export const BackGround = () => {
   return (
