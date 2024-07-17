@@ -7,6 +7,7 @@ import { sidebarLinks } from '@/data/sidebar-links';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { myLinks } from '@/data/my-links';
+import { EmailNavigateButton } from '@/components/elements/buttons/emailNavigateButton';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -103,7 +104,7 @@ export const SideBar = ({ isOpen, setIsOpen }: {
       </div>
       <div ref={getInTouchRef} className='text-gray-600 absolute bottom-10 '>
         <h5 className='font-bold my-2'>GET IN TOUCH</h5>
-        <p className='hover:text-white hover:cursor-pointer my-2 transition duration-300'>misatotanno3310@gmail.com</p>
+        <EmailNavigateButton/>
         <p>BASED IN 📍 TOKYO, JAPAN | CALGARY, CANADA</p>
       </div>
     </section>

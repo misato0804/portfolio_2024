@@ -1,7 +1,8 @@
 import "./style.css"
 import { myLinks } from "@/data/my-links"
 import { FileText } from "lucide-react"
-import ButtonNormal from "@/components/elements/buttons/ButtonNormal"
+import ButtonNormal from "../buttons/buttonNormal/ButtonNormal"
+import { EmailNavigateButton } from "../buttons/emailNavigateButton"
 
 
 export const Footer = () => {
@@ -12,10 +13,12 @@ export const Footer = () => {
         <div>
           <h6 className="footer-sub-title">GET TO KNOW MORE</h6>
           <div className="min-h-[45px] flex items-center">
-            <div className="grid grid-cols-2 gap-6">
-              <ButtonNormal title="Japanese CV" onClick={() => console.log('hello')} icon={FileText} bgColor="bg-black" />
-              <ButtonNormal title="English CV" onClick={() => console.log('hello')} icon={FileText} bgColor="bg-black" />
-            </div>
+            <ButtonNormal
+              title="See resume"
+              onClick={() => console.log('hello')}
+              icon={FileText}
+              bgColor="bg-black"
+            />
           </div>
           <p> ©︎ Misato Tanno 2024, All right reserved</p>
         </div>
@@ -36,7 +39,7 @@ export const Footer = () => {
               )
             })}
           </ul>
-          <p className="font-[1.2rem] tracking-wider">misatotanno3310@gmail.com</p>
+          <EmailNavigateButton />
         </div>
       </div>
     </footer>

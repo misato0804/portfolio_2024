@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { ProjectCardProps } from './type'
 import { FaCheck } from "react-icons/fa";
-import ButtonNormal from '@/components/elements/buttons/ButtonNormal';
+import ButtonNormal from '@/components/elements/buttons/buttonNormal/ButtonNormal';
 import { Code } from 'lucide-react';
 import { AppWindowMac } from 'lucide-react';
 
