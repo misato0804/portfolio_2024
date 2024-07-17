@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import gsap from "gsap"
 import { RxHamburgerMenu } from "react-icons/rx";
-import { SideBar } from '../sidebar';
+import { SideBar } from '../../features/sidebar';
 
 export const Header = () => {
 
