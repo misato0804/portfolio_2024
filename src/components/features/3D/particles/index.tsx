@@ -4,33 +4,14 @@ import * as THREE from 'three';
 import { shaderMaterial } from '@react-three/drei';
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { fragmentShader, vertexShader } from "./vertexShader";
 
 const CircleMaterial = shaderMaterial(
   {
-    uColor: new THREE.Color(0xff69b4), // Light pink color for cherry blossom
+    uColor: new THREE.Color(0xff69b4),
   },
-  // Vertex Shader
-  `
-  varying vec2 vUv;
-  void main() {
-    vUv = uv;
-    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-    gl_PointSize = 7.0; // Adjust size as needed
-  }
-  `,
-  // Fragment Shader
-  `
-  uniform vec3 uColor;
-  varying vec2 vUv;
-  void main() {
-    vec2 cxy = 2.0 * gl_PointCoord - 1.0;
-    float r = dot(cxy, cxy);
-    if (r > 1.0) {
-      discard;
-    }
-    gl_FragColor = vec4(uColor, 0.9);
-  }
-  `
+  vertexShader,
+  fragmentShader
 );
 
 extend({ CircleMaterial });
