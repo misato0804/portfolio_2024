@@ -3,8 +3,8 @@ import { BackGround } from "@/components/elements/background";
 import MainAbout from "@/components/elements/main_about";
 import { MainProjects } from "@/components/elements/main_projects";
 import { MainTop } from "@/components/elements/main_top";
-import { Footer } from "@/components/features/footer/Footer";
-import { Header } from "@/components/features/header/Header";
+import { Footer } from "@/components/elements/footer/Footer";
+import { Header } from "@/components/elements/header/Header";
 import { PreLoader } from "@/components/features/preLoader";
 import { useState } from "react";
 
