@@ -29,7 +29,7 @@ export const MainTop = () => {
         <div>
           <div>
             <h1 ref={titleRef} className="text-7xl">Misato Tanno</h1>
-            <h3 ref={subtitleRef}>Frontend engineer</h3>
+            <h3 ref={subtitleRef}>Frontend developer</h3>
           </div>
           <ScrollDown />
         </div>

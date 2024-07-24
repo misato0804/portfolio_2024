@@ -76,6 +76,7 @@ export const SideBar = ({ isOpen, setIsOpen }: {
       </span>
 
       <ul className='absolute right-12 flex flex-col w-[24px] h-4/5 justify-center items-center gap-36'>
+      <li><p className='[writing-mode:vertical-lr] tracking-widest-vertical font-bold opacity-80'>SOCIAL</p></li>
         {myLinks.map(item => {
           const IconComponent = item.icon;
           return (
