@@ -7,11 +7,10 @@ import { EmailNavigateButton } from "../buttons/emailNavigateButton"
 
 export const Footer = () => {
   return (
-    <footer className='md:flex justify-around items-center'>
-
+    <footer className='md:flex justify-around items-center md:px-20'>
       <div className="container">
         <div>
-          <h6 className="footer-sub-title">GET TO KNOW MORE</h6>
+          <h6 className="footer-sub-title underline">GET TO KNOW MORE</h6>
           <div className="min-h-[45px] flex items-center">
             <ButtonNormal
               title="See resume"
@@ -24,10 +23,10 @@ export const Footer = () => {
         </div>
       </div>
 
-      <div className="container left text-right ">
+      <div className="container md:text-right md:justify-end">
         <div>
-          <h6 className="footer-sub-title">GET IN TOUCH</h6>
-          <ul className="min-h-[45px] items-center justify-end">
+          <h6 className="footer-sub-title underline">GET IN TOUCH</h6>
+          <ul className="min-h-[45px] items-center md:justify-end">
             {myLinks.map(item => {
               const IconComponent = item.icon;
               return (

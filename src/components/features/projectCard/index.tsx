@@ -5,22 +5,21 @@ import ButtonNormal from '@/components/elements/buttons/buttonNormal/ButtonNorma
 import { Code } from 'lucide-react';
 import { AppWindowMac } from 'lucide-react';
 
-export const ProjectCard = ({ title, image, alt, demoLink, githubLink,description, stacks}: ProjectCardProps) => {
+export const ProjectCard = ({ title, image, alt, demoLink, githubLink, description, stacks }: ProjectCardProps) => {
 
   return (
     <div className="h-screen flex-none w-1/4">
-      <div className='w-screen h-screen flex justify-center items-center'>
-        <div className='flex w-[80%] justify-evenly'>
-          <div className="image-container flex-1 z-10">
+      <div className='w-screen h-screen flex justify-center items-center bg-cyan-200'>
+        <div className='lg:flex w-[80%] justify-evenly'>
+          <div className="relative flex-1  w-full h-[300px]">
             <Image
               alt={alt}
               src={image}
-              width={400}
-              height={500}
-              className='z-10'
+              fill
+              objectFit='contain'
             />
           </div>
-          <div className='detail-container flex-1'>
+          <div className='flex-1 my-8'>
             <div>
               <h1 className='font-display font-bold my-2'>{title}</h1>
               <p> {description} </p>
@@ -36,19 +35,23 @@ export const ProjectCard = ({ title, image, alt, demoLink, githubLink,descriptio
                 </div>
               ))}
             </div>
-            <div className='flex space-x-4'>
-              <ButtonNormal
-                title={'Go to demo'}
-                onClick={() => window.open(demoLink, '_blank')}
-                bgColor={'bg-black'}
-                icon={AppWindowMac}
-              />
-              <ButtonNormal
-                title={'Go to Github'}
-                onClick={() => { }}
-                bgColor={'bg-black'}
-                icon={Code}
-              />
+            <div className='w-full space-y-2 md:flex  md:space-x-4 md:space-y-0'>
+              <div>
+                <ButtonNormal
+                  title={'Go to demo'}
+                  onClick={() => window.open(demoLink, '_blank')}
+                  bgColor={'bg-black'}
+                  icon={AppWindowMac}
+                />
+              </div>
+              <div>
+                <ButtonNormal
+                  title={'Go to Github'}
+                  onClick={() => { }}
+                  bgColor={'bg-black'}
+                  icon={Code}
+                />
+              </div>
             </div>
           </div>
           <div>
