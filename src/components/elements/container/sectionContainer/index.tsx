@@ -12,15 +12,15 @@ export const SectionContainer = ({ children, sectionTitle, description }: Sectio
   useEffect(() => {
     const timeline = gsap.timeline({
       scrollTrigger: titleRef.current,
-      start: 'top bottom',
-      scrub: 1
+      start: '20% bottom',
+      scrub: 1,
     });
     if (titleRef.current && paragraghRef.current && titleRef.current) {
 
       timeline.fromTo(
         titleRef.current, 
         {opacity: 0, y: 30},
-        {opacity: 1, y: 0, duration: 1, ease: 'power3.out'},
+        {opacity: 1, y: 0, duration: 1.5, ease: 'power3.out'},
       )
       timeline.fromTo(
         paragraghRef.current, 
@@ -33,8 +33,8 @@ export const SectionContainer = ({ children, sectionTitle, description }: Sectio
   }, [])
 
   return (
-    <section className='bg-slate-300 border-4 max-w-[1280px] h-screen mx-auto p-12 md:p-24 lg:p-32'>
-      <div className='md:grid grid-cols-3'>
+    <section className=' border-4 max-w-[1280px] h-screen mx-auto p-12 md:p-24 lg:p-32'>
+      <div className='md:grid grid-cols-3 my-12'>
         <h1 ref={titleRef} className='font-display md:text-center'> {sectionTitle} </h1>
         <p ref={paragraghRef} className='my-4 md:my-0 col-span-2 text-[1.2rem]'>{description}</p>
       </div>
