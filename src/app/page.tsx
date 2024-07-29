@@ -1,12 +1,12 @@
 'use client'
 import { BackGround } from "@/components/elements/background";
-import MainAbout from "@/components/elements/main_about";
-import { MainProjects } from "@/components/elements/main_projects";
 import { MainTop } from "@/components/elements/main_top";
 import { Footer } from "@/components/elements/footer/Footer";
 import { Header } from "@/components/elements/header/Header";
 import { PreLoader } from "@/components/features/preLoader";
 import { useState } from "react";
+import { Projects } from "@/components/elements/projects";
+import { About } from "@/components/elements/about";
 
 export default function Home() {
 
@@ -19,12 +19,13 @@ export default function Home() {
           <Header />
           <main>
             <MainTop />
-            <MainProjects />
-            <MainAbout />
+            <Projects />
+            <About/>
             <BackGround />
           </main>
           <Footer />
-        </div>}
+        </div>
+      }
     </>
   );
 }

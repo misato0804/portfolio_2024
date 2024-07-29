@@ -79,13 +79,13 @@ const MainAbout = () => {
   }, [])
 
   return (
-    <section className='about' ref={aboutContainerRef}>
-      <div className='introduction grid grid-cols-2 gap-8'>
+    <section className='about border-red-50 border-4' ref={aboutContainerRef}>
+      <div className='introduction '>
         <div className='description'>
           <h1 className='font-display font-bold mb-8'>About me</h1>
           <p ref={textRef} className='text1'>{ originalText }</p>
         </div>
-        <div ref={imageRef} className='my-image w-[450px] h-[370px] bg-slate-500 object-fill'></div>
+        <div ref={imageRef} className='image my-image bg-slate-500 object-fill'></div>
       </div>
     </section>
   )

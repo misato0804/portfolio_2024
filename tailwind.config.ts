@@ -19,6 +19,17 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        "complex-gradient":
+          "linear-gradient(to right, black, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6), transparent)",
+        "gradient-to-right-transparent":
+          "linear-gradient(to right, black 25%, transparent 80%)",
+        "gradient-to-bottom-transparent":
+          "linear-gradient(to top, black 25%, transparent 80%)",
+      },
+      filter: {
+        "blur-custom": "blur(10px)",
+      },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
         serif: ["Lora", "serif"],
