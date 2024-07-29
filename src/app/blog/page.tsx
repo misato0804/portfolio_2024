@@ -1,20 +1,26 @@
-import client from '@/lib/contentful/client'
+import client from '@/lib/contentful/client';
 
 const Blog = async () => {
-
-  if (client) {
-
-    const res = await client.getEntries({
+  let res;
+  try {
+    res = await client.getEntries({
       content_type: 'post',
     });
-
-  } else return
+  } catch (error) {
+    console.error('Error fetching entries:', error);
+    return (
+      <div>
+        Error loading blog posts.
+      </div>
+    );
+  }
 
   return (
     <div>
       This is blog top
+      {/* You can map and render blog posts from `res.items` here */}
     </div>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;
