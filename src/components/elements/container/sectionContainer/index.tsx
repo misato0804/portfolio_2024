@@ -33,9 +33,9 @@ export const SectionContainer = ({ children, sectionTitle, description }: Sectio
   }, [])
 
   return (
-    <section className=' border-4 max-w-[1280px] h-screen mx-auto p-12 md:p-24 lg:p-32'>
+    <section className='max-w-[1280px] min-h-screen mx-auto p-12 md:p-24 lg:p-32'>
       <div className='md:grid grid-cols-3 my-12'>
-        <h1 ref={titleRef} className='font-display md:text-center'> {sectionTitle} </h1>
+        <h1 ref={titleRef} className='font-display md:text-center bg-black mr-6 text-white items-center flex justify-center'> {sectionTitle} </h1>
         <p ref={paragraghRef} className='my-4 md:my-0 col-span-2 text-[1.2rem]'>{description}</p>
       </div>
       {children}
