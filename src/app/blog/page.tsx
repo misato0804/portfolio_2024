@@ -1,13 +1,15 @@
 import client from '@/lib/contentful/client'
 
+const Blog = async () => {
 
-const Blog = async() => {
+  if (client) {
 
-  const res = await client.getEntries({
-    content_type: 'post',
-  });
-  console.log(res.items[0].fields)
-  
+    const res = await client.getEntries({
+      content_type: 'post',
+    });
+
+  } else return
+
   return (
     <div>
       This is blog top
