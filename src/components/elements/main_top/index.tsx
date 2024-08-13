@@ -15,11 +15,11 @@ export const MainTop = () => {
     timeLine.fromTo(
       titleRef.current,
       { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
+      { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }
     ).fromTo(
       subtitleRef.current,
       { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
+      { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }
     )
   }, [])
 
@@ -28,8 +28,8 @@ export const MainTop = () => {
       <section className="main-top">
         <div>
           <div>
-            <h1 ref={titleRef} className="text-7xl">Misato Tanno</h1>
-            <h3 ref={subtitleRef}>Frontend developer</h3>
+            <h1 ref={titleRef} className="text-7xl font-display">Misato Tanno</h1>
+            <h3 ref={subtitleRef} className="font-display">Frontend developer</h3>
           </div>
           <ScrollDown />
         </div>

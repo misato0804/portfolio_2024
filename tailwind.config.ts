@@ -109,6 +109,20 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        animatedText: {
+          "0%,to": {
+            backgroundSize: "400% 400%",
+            backgroundPosition: "left center",
+          },
+          "50%": {
+            backgroundSize: "400% 400%",
+            backgroundPosition: "right center",
+          },
+          "100%": {
+            backgroundSize: "400% 400%",
+            backgroundPosition: "left center",
+          },
+        },
         "accordion-down": {
           from: {
             height: "0",
@@ -133,11 +147,19 @@ const config = {
             strokeDashoffset: "0",
           },
         },
+        morphing: {
+          '0%, 100%': { borderRadius: '60% 50% 50% 70%' },
+          '25%': { borderRadius: '70% 30% 50% 50%' },
+          '50%': { borderRadius: '50% 70% 60% 50%' },
+          '75%': { borderRadius: '70% 50% 70% 60%' },
+        },
       },
       animation: {
+        "animationTexted": "animatedText 5s infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "stroke-dash": "strokeDash 2s ease-in-out infinite",
+        "morphing": 'morphing 5s infinite',
       },
     },
   },
