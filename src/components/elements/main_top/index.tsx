@@ -15,11 +15,11 @@ export const MainTop = () => {
     timeLine.fromTo(
       titleRef.current,
       { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
+      { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }
     ).fromTo(
       subtitleRef.current,
       { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }
+      { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }
     )
   }, [])
 

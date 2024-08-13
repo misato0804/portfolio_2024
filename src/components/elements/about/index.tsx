@@ -1,15 +1,65 @@
+import { useEffect, useRef, useState } from "react"
 import { SectionContainer } from "../container/sectionContainer"
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import WebDevelopment from "./contents/webDevelopment"
+import SoftSkills from "./contents/softskills";
+import Hobbies from "./contents/hobbies";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const contentsArray = [<WebDevelopment/>, <SoftSkills/>, <Hobbies/>]
 
 export const About = () => {
+  const scrollContainer = useRef<HTMLDivElement | null>(null)
+  const contentRef = useRef<HTMLDivElement | null>(null)
+  const [content, setContent] = useState(contentsArray[0]);
 
+  useEffect(() => {
+
+    if (scrollContainer.current) {
+
+      const timeLine = gsap.timeline({
+        trigger: scrollContainer.current,
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: true,
+        pin: true
+      })
+
+      ScrollTrigger.create({
+        trigger: scrollContainer.current,
+        start: 'top bottom',
+        end: 'bottom top',
+        onUpdate: (self) => {
+
+          const progress = self.progress;
+          if (progress < 0.33) {
+            setContent(contentsArray[0]);
+          } else if (progress < 0.66) {
+            setContent(contentsArray[1]);
+          } else {
+            setContent(contentsArray[2]);
+          }
+        },
+        scrub: true,
+      })
+      contentRef.current
+    }
+
+  }, [content])
 
   return (
-    <SectionContainer
-      sectionTitle={"About"}
-      description={"y standard dummy text printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."}>
-        <div className="image-container">
-        </div>
-
-    </SectionContainer>
+    <div ref={scrollContainer} className="h-[400vh] w-screen">
+      <div className="sticky top-10 md:-top-40">
+        <SectionContainer
+          sectionTitle={"About"}
+          description={""}>
+            <div ref={contentRef}>
+            { content }
+            </div>
+        </SectionContainer>
+      </div>
+    </div>
   )
 }
