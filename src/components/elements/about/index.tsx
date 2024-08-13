@@ -8,6 +8,7 @@ import Hobbies from "./contents/hobbies";
 
 gsap.registerPlugin(ScrollTrigger);
 
+// eslint-disable-next-line react/jsx-key
 const contentsArray = [<WebDevelopment/>, <SoftSkills/>, <Hobbies/>]
 
 export const About = () => {
