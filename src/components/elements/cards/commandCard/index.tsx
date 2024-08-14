@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import { gsap } from 'gsap';
 import { useEffect, useRef } from 'react';
+import { CommandCardProps } from './type';
 
-export const CommandCard = () => {
+export const CommandCard = ({ project, setDisplayProject }: CommandCardProps) => {
   const cardRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -33,16 +34,20 @@ export const CommandCard = () => {
             element.removeEventListener('mouseleave', handleMouseLeave);
           };
         }
-      }, 100); 
+      }, 100);
     }
   }, [])
 
 
   return (
-    <div ref={cardRef} className="relative hover:cursor-pointer w-full h-[150px] border-2 rounded-[25px] ">
+    <div
+      ref={cardRef}
+      className="relative hover:cursor-pointer w-full h-[150px] border-2 rounded-[25px]"
+      onClick={() => setDisplayProject(project)}
+    >
       <Image
-        alt='project image'
-        src='/sample.jpeg'
+        alt={project.alt}
+        src={project.image}
         fill
         sizes="(max-width: 180px), 180px"
         priority

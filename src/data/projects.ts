@@ -8,7 +8,7 @@ export const myProjects : Project[]= [
     demoLink: "https://misato-tanno-2024.vercel.app/",
     githubLink: "https://github.com/misato0804/portfolio_2024",
     description: "Fully responsive my portofolio which is made with Next.js×Typescript. This is my first creation that I incprporated some animation using GSAP and Three.js shader.",
-    stacks: ["Typescript", "Next.js", "Tailwind.CSS", "Three.js", "GSAP" ]
+    stacks: ["Typescript", "Next14.js", "Tailwind.CSS", "Three.js", "GSAP" ]
   },
   {
     title: "jobseed",
@@ -26,15 +26,15 @@ export const myProjects : Project[]= [
     demoLink: "https://snap-study.vercel.app/",
     githubLink: "https://github.com/misato0804/flash-card",
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  when an unknown printer took a galley of type and scrambled it to make a type",
-    stacks: ["Typescript", "Next.js", "Tailwind.CSS", "Firebase"]
+    stacks: ["Typescript", "Next14.js", "Tailwind.CSS", "Firebase"]
   },
   {
-    title: "Snap Study",
+    title: "tourlist",
     image: "/sample.jpeg",
     alt: "web application",
-    demoLink: "/",
-    githubLink: "/",
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  when an unknown printer took a galley of type and scrambled it to make a type",
-    stacks: ["Typescript", "HTML", "Next", "CSS"]
+    demoLink: "https://tourlist.vercel.app/",
+    githubLink: "https://github.com/misato0804/tourlist",
+    description: "If you have any plans to visit Japan, specifically Tokyo, Osaka, and Kyoto, this is perfect for you. Also this project helped me understand the differences between SSR and SSG.",
+    stacks: ["Typescript", "Next.13", "GraphQL", "Hygraph CMS"]
   },
 ]
