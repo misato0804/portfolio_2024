@@ -16,7 +16,7 @@ const ContentContainer = ({ children }: contentContainerProps) => {
   }, [children]);
 
   return (
-    <div ref={containerRef} className="w-full h-[60vh] lg:flex items-center">
+    <div ref={containerRef} className="h-[60vh] lg:flex items-center">
       {children}
     </div>
   )

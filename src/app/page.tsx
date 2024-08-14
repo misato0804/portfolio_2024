@@ -20,7 +20,7 @@ export default function Home() {
           <main>
             <MainTop />
             <Projects />
-            <About/>
+            <About/>ß
             <BackGround />
           </main>
           <Footer />

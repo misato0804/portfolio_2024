@@ -7,7 +7,7 @@ import { EmailNavigateButton } from "../buttons/emailNavigateButton"
 
 export const Footer = () => {
   return (
-    <footer className='md:flex justify-around items-center md:px-20'>
+    <footer className='md:flex justify-around items-center md:px-20 mt-20'>
       <div className="container">
         <div>
           <h6 className="footer-sub-title underline">GET TO KNOW MORE</h6>

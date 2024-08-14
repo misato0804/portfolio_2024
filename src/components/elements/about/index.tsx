@@ -9,7 +9,7 @@ import Hobbies from "./contents/hobbies";
 gsap.registerPlugin(ScrollTrigger);
 
 // eslint-disable-next-line react/jsx-key
-const contentsArray = [<WebDevelopment/>, <SoftSkills/>, <Hobbies/>]
+const contentsArray = [<WebDevelopment />, <SoftSkills />, <Hobbies />]
 
 export const About = () => {
   const scrollContainer = useRef<HTMLDivElement | null>(null)
@@ -19,15 +19,6 @@ export const About = () => {
   useEffect(() => {
 
     if (scrollContainer.current) {
-
-      const timeLine = gsap.timeline({
-        trigger: scrollContainer.current,
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: true,
-        pin: true
-      })
-
       ScrollTrigger.create({
         trigger: scrollContainer.current,
         start: 'top bottom',
@@ -55,10 +46,11 @@ export const About = () => {
       <div className="sticky top-10 md:-top-40">
         <SectionContainer
           sectionTitle={"About"}
-          description={""}>
-            <div ref={contentRef}>
-            { content }
-            </div>
+          description={""}
+        >
+          <div ref={contentRef}>
+            {content}
+          </div>
         </SectionContainer>
       </div>
     </div>

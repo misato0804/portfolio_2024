@@ -1,8 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { IoMdClose } from "react-icons/io";
-import { FaInstagram } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
 import { sidebarLinks } from '@/data/sidebar-links';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
