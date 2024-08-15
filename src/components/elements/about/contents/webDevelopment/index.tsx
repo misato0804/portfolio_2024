@@ -24,7 +24,7 @@ const WebDevelopment = () => {
 
   return (
     <ContentContainer>
-      <div ref={containerRef} className="w-full h-2/3 lg:w-1/2 bg-blue-100 animate-morphing"></div>
+      <div ref={containerRef} className="w-full h-2/3 lg:w-1/2 bg-[url('/webdev.jpg')] bg-cover bg-center animate-morphing"></div>
       <div className="p-12 w-full lg:w-1/2">
         <p className="font-bold my-4 tracking-wider">I can help you with...</p>
         <h3 className="font-display text-6xl my-4 md:text-8xl font-bold text-transparent lg:text-8xl bg-clip-text bg-gradient-to-r from-blue-950 via-slate-500 to-slate-300 animate-animationTexted">
