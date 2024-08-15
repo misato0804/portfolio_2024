@@ -41,8 +41,8 @@ export const myProjects : Project[]= [
     title: "P plane",
     image: "/pplane.jpg",
     alt: "web application",
-    demoLink: "https://tourlist.vercel.app/",
-    githubLink: "https://github.com/misato0804/tourlist",
+    demoLink: "https://vanstage-next-one.vercel.app/",
+    githubLink: "https://github.com/keento0809/vanstage-next",
     description: "I was in carge of building top page and abut page as a frontend developer. This application helps newcomers to Vancouver, especially those in the tech field, find a mentor. And you can find a mentor who matches your schedule, categories, and budget.",
     stacks: ["Typescript", "Next13", "GraphQL"]
   },

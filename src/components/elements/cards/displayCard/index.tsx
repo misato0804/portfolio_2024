@@ -42,13 +42,14 @@ export const DisplayCard = (project: Project) => {
           <div className='absolute grid grid-cols-2 gap-4'>
             <ButtonNormal
               title={'Go to demo'}
-              onClick={() => window.open('http;//google.com', '_blank')}
+              // onClick={() => window.open(project.demoLink, '_blank')}
+              link={project.demoLink}
               bgColor={'bg-sky-900'}
               icon={AppWindowMac}
             />
             <ButtonNormal
               title={'Go to Github'}
-              onClick={() => window.open('http;//google.com', '_blank')}
+              link={project.githubLink}
               bgColor={'bg-green-900'}
               icon={Code}
             />
