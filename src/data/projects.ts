@@ -3,16 +3,16 @@ import { Project } from "@/components/features/projectCard/type";
 export const myProjects : Project[]= [
   {
     title: "my portfolio",
-    image: "/sample.jpeg",
+    image: "/portfolio.jpg",
     alt: "portfolio",
     demoLink: "https://misato-tanno-2024.vercel.app/",
     githubLink: "https://github.com/misato0804/portfolio_2024",
     description: "Fully responsive my portofolio which is made with Next.js×Typescript. This is my first creation that I incprporated some animation using GSAP and Three.js shader.",
-    stacks: ["Typescript", "Next14.js", "Tailwind.CSS", "Three.js", "GSAP" ]
+    stacks: ["Typescript", "Next14", "Tailwind.CSS", "Three.js", "GSAP" ]
   },
   {
     title: "jobseed",
-    image: "/sample.jpeg",
+    image: "/jobseed.jpg",
     alt: "job hunt organizer",
     demoLink: "https://jobseed.vercel.app/",
     githubLink: "https://github.com/keento0809/jobseed",
@@ -21,20 +21,38 @@ export const myProjects : Project[]= [
   },
   {
     title: "Snap Study",
-    image: "/sample.jpeg",
+    image: "/snapstudy.jpg",
     alt: "flash card application",
     demoLink: "https://snap-study.vercel.app/",
     githubLink: "https://github.com/misato0804/flash-card",
     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  when an unknown printer took a galley of type and scrambled it to make a type",
-    stacks: ["Typescript", "Next14.js", "Tailwind.CSS", "Firebase"]
+    stacks: ["Typescript", "Next14", "Tailwind.CSS", "Firebase"]
   },
   {
     title: "tourlist",
-    image: "/sample.jpeg",
+    image: "/tourlist.jpg",
     alt: "web application",
     demoLink: "https://tourlist.vercel.app/",
     githubLink: "https://github.com/misato0804/tourlist",
     description: "If you have any plans to visit Japan, specifically Tokyo, Osaka, and Kyoto, this is perfect for you. Also this project helped me understand the differences between SSR and SSG.",
-    stacks: ["Typescript", "Next.13", "GraphQL", "Hygraph CMS"]
+    stacks: ["Typescript", "Next13", "GraphQL", "Hygraph CMS"]
+  },
+  {
+    title: "P plane",
+    image: "/pplane.jpg",
+    alt: "web application",
+    demoLink: "https://tourlist.vercel.app/",
+    githubLink: "https://github.com/misato0804/tourlist",
+    description: "I was in carge of building top page and abut page as a frontend developer. This application helps newcomers to Vancouver, especially those in the tech field, find a mentor. And you can find a mentor who matches your schedule, categories, and budget.",
+    stacks: ["Typescript", "Next13", "GraphQL"]
+  },
+  {
+    title: "weather forecast",
+    image: "/weatherapp.jpg",
+    alt: "web application",
+    demoLink: "https://likuor.github.io/midterm-wheather-app/",
+    githubLink: "https://github.com/likuor/midterm-wheather-app?tab=readme-ov-file",
+    description: "If you have any plans to visit Japan, specifically Tokyo, Osaka, and Kyoto, this is perfect for you. Also this project helped me understand the differences between SSR and SSG.",
+    stacks: ["HTML", "CSS", "Javascript"]
   },
 ]

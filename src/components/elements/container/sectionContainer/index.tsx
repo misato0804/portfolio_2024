@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const SectionContainer = ({ children, sectionTitle, description }: SectionContainerProps) => {
+export const SectionContainer = ({ children, sectionTitle, description, id }: SectionContainerProps) => {
   const titleRef = useRef<HTMLHeadingElement | null>(null)
   const paragraghRef = useRef<HTMLParagraphElement | null>(null)
   const childRef = useRef<HTMLDivElement | null>(null)
@@ -62,7 +62,7 @@ export const SectionContainer = ({ children, sectionTitle, description }: Sectio
   }, [])
 
   return (
-    <section className='max-w-[1280px] mx-auto p-12 md:p-24 lg:p-32'>
+    <section id={id} className='max-w-[1280px] mx-auto p-12 md:p-24 lg:p-32'>
       <div className='md:grid grid-cols-3 my-24'>
         <div className='relative flex justify-center items-center my-24'>
           <svg ref={svgRef} className='absolute max-w-[280px] w-full h-auto' viewBox="0 0 867 271" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ transform: 'translate(-50%, -50%)', top: '50%', left: '50%' }}>

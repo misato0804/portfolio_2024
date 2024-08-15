@@ -45,6 +45,7 @@ export const About = () => {
     <div ref={scrollContainer} className="h-[400vh] w-screen">
       <div className="sticky top-10 md:-top-40">
         <SectionContainer
+        id="about"
           sectionTitle={"About"}
           description={""}
         >

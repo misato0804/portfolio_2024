@@ -16,12 +16,12 @@ export const sidebarLinks: SideBarLink[]  = [
     title: "About",
     navigationId: "about"
   },
-  {
-    title: "Blog",
-    navigationId: "blog"
-  },
-  {
-    title: "Resume",
-    navigationId: "resume"
-  },
+  // {
+  //   title: "Blog",
+  //   navigationId: "blog"
+  // },
+  // {
+  //   title: "Resume",
+  //   navigationId: "resume"
+  // },
 ]

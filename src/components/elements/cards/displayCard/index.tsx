@@ -30,12 +30,12 @@ export const DisplayCard = (project: Project) => {
       <div className="absolute w-1/3 h-full bg-black z-10 hidden lg:block">
         <div ref={displayProjectRefLg} className='text-white py-24 px-12'>
           <h3 className='font-display font-bold text-xl'>{project.title}</h3>
-          <p className='hidden lg:block'>{project.description}</p>
+          <p className='hidden my-4 lg:block'>{project.description}</p>
           <ul className='flex-col my-8 '>
             {project.stacks.map((stack, _index) => (
               <li key={stack} className='leading-3'>
                 <span className='w-2 h-2 bg-white inline-block mr-2'></span>
-                <span>{stack}</span>
+                <span className='text-[1.2rem] font-bold'>{stack}</span>
               </li>
             ))}
           </ul>
@@ -43,13 +43,13 @@ export const DisplayCard = (project: Project) => {
             <ButtonNormal
               title={'Go to demo'}
               onClick={() => window.open('http;//google.com', '_blank')}
-              bgColor={'bg-winter-iceBlue'}
+              bgColor={'bg-sky-900'}
               icon={AppWindowMac}
             />
             <ButtonNormal
               title={'Go to Github'}
               onClick={() => window.open('http;//google.com', '_blank')}
-              bgColor={'bg-winter-iceBlue'}
+              bgColor={'bg-green-900'}
               icon={Code}
             />
           </div>
@@ -57,8 +57,8 @@ export const DisplayCard = (project: Project) => {
       </div>
       <div className="absolute w-full lg:w-2/3 h-2/3 lg:h-full right-0">
         <Image
-          alt='project image'
-          src='/sample.jpeg'
+          alt={project.alt}
+          src={project.image}
           fill
           sizes="(max-width: 448px) 100vw, 448px"
           priority
@@ -73,7 +73,7 @@ export const DisplayCard = (project: Project) => {
               {project.stacks.map((stack, _index) => (
                 <li key={stack} className='leading-3'>
                   <span className='w-2 h-2 bg-white inline-block mr-2'></span>
-                  <span>{stack}</span>
+                  <span className='text-[1.2rem] font-bold'>{stack}</span>
                 </li>
               ))}
             </ul>
