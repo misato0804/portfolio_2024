@@ -14,7 +14,7 @@ export const Footer = () => {
           <div className="min-h-[45px] flex items-center">
             <ButtonNormal
               title="See resume"
-              onClick={() => console.log('hello')}
+              link="/resume.pdf"
               icon={FileText}
               bgColor="bg-black"
             />

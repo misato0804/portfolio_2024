@@ -12,7 +12,7 @@ const SoftSkills = () => {
         <p className="font-bold tracking-wider text-md">
         Skilled in clear communication, I excel in managing time effectively while adapting to dynamic environments. My ability to balance diverse tasks ensures successful project completion and collaboration.        </p>
       </div>
-      <div className="w-full h-2/3 lg:w-1/2 bg-green-100 animate-morphing"></div>
+      <div className="w-full h-2/3 lg:w-1/2 bg-[url('/softskill.jpg')] bg-cover bg-center animate-morphing"></div>
     </ContentContainer>
   )
 }
