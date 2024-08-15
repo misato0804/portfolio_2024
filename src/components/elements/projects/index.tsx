@@ -14,10 +14,11 @@ import { useState } from "react"
 
 export const Projects = () => {
 
-  const [displayProject, setDisplayProject ] = useState<Project>(myProjects[0])
+  const [displayProject, setDisplayProject] = useState<Project>(myProjects[0])
 
   return (
     <SectionContainer
+      id="projects"
       sectionTitle="Projects"
       description="Dive into my portfolio, where I bring ideas to life using a powerful stack of React, JavaScript, Tailwind CSS, and Next.js. My projects showcase my ability to build responsive, efficient, and visually appealing web applications. "
     >
@@ -33,7 +34,7 @@ export const Projects = () => {
           <CarouselContent>
             {myProjects.map((project, index) => (
               <CarouselItem key={index} className="basis-1/2 sm:basis-1/3 md:basis-1/4">
-                  <CommandCard project={project} setDisplayProject={setDisplayProject} />
+                <CommandCard project={project} setDisplayProject={setDisplayProject} />
               </CarouselItem>
             ))}
           </CarouselContent>
